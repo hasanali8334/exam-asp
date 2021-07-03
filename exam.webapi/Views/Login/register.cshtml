@@ -1,0 +1,34 @@
+﻿@model exam.webapi.Entity.User
+   
+
+
+
+<h1>Kullanıcı kayıt</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-9">
+        <form asp-action="login/register" method="post">
+            
+            <div class="form-group">
+                <label asp-for="mail" class="control-label">Mail</label>
+                <input name="mail" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="password" class="control-label">Password:</label>
+                <input name="password" class="form-control" type="password" />
+
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save User Details" class="btn btn-primary" />
+            </div>
+           
+        </form>
+    </div>
+</div>
+
+
