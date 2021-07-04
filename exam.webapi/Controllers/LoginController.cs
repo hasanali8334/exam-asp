@@ -27,10 +27,7 @@ namespace exam.webapi.Controllers
         {
             return View();
         }
-        public IActionResult Login()
-        {
-            return View();
-        }
+       
         public async Task<IActionResult> Login(User u)
         {
             var bilgiler = _context.Users.FirstOrDefault(x => x.mail == u.mail && x.password == u.password);

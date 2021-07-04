@@ -1,0 +1,93 @@
+﻿
+<form action="#" method="post">
+    <div class="form-group">
+        <label for="examname">Sınav Adı:</label>
+        <input type="text" name="examname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="examname">Soru açıklaması:</label>
+        <input type="text" name="qtext" class="form-control"  id="qtext"/>
+    </div>
+    <div class="form-group">
+        <label for="opt1">a şıkkı:</label>
+        <input type="text" name="opt1" class="form-control" id="opt1"/>
+    </div>
+    <div class="form-group">
+        <label for="opt2">b şıkkı:</label>
+        <input type="text" name="opt2" class="form-control" id="opt2" />
+    </div>
+    <div class="form-group">
+        <label for="opt3">c şıkkı:</label>
+        <input type="text" name="opt3" class="form-control" id="opt3"/>
+    </div>
+    <div class="form-group">
+        <label for="opt4">d şıkkı:</label>
+        <input type="text" name="opt4" class="form-control" id="opt4"/>
+    </div>
+    <div class="form-group">
+        <label for="opt5">e şıkkı:</label>
+        <input type="text" name="opt5" class="form-control" id="opt5"/>
+    </div>
+    <div class="form-group">
+        <label for="copt">Doğru şık:</label>
+        <select id="copt">
+            <option value="" selected="selected">doğru şıkkı seçiniz</option>
+            <option value="opt1">a şıkkı</option>
+            <option value="opt2">b şıkkı</option>
+            <option value="opt3">c şıkkı</option>
+            <option value="opt4">d şıkkı</option>
+            <option value="opt5">e şıkkı</option>
+        </select>
+    </div>
+    <input name="qtextarray" id="opt1array" type="hidden" class="form-control" />
+    <input name="opt1array" id="opt1array" type="hidden" class="form-control"/>
+    <input name="opt2array" id="opt2array" type="hidden" class="form-control"/>
+    <input name="opt3array" id="opt3array" type="hidden" class="form-control"/>
+    <input name="opt4array" id="opt4array" type="hidden" class="form-control"/>
+    <input name="opt5array" id="opt5array" type="hidden" class="form-control"/>
+    <input name="coptarray" id="coptarray" type="hidden" class="form-control"/>
+    <button type="submit">Sınav oluşturmayı tamamlayın</button>
+    <button onclick="kaydet()">Soruyu kaydet</button>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var qtext = document.getElementById("qtext");
+        var opt1 = document.getElementById("opt1");
+        var opt2 = document.getElementById("opt2");
+        var opt3 = document.getElementById("opt3");
+        var opt4 = document.getElementById("opt4");
+        var opt5 = document.getElementById("opt5");
+        var copt = document.getElementById("copt");
+        var qtexta = document.getElementById("qtextarray");
+        var op1a = document.getElementById("opt1array");
+        var op2a = document.getElementById("opt2array");
+        var op3a = document.getElementById("opt3array");
+        var op4a = document.getElementById("opt4array");
+        var op5a = document.getElementById("opt5array");
+        var copa = document.getElementById("coptarray");
+        function kaydet() {
+            if (op1a == null && op2a == null && op3a == null && op4a == null && op5a == null && copa == null) {
+                qtexta.value = qtext.value;
+                op1a.value = opt1.value;
+                op2a.value = opt2.value;
+                op3a.value = opt3.value;
+                op4a.value = opt4.value;
+                op4a.value = opt5.value;
+                copa.value = copt.value;
+
+            }
+            else {
+                qtexta.value += "," + qtext.value;
+                op1a.value += "," + opt1.value;
+                op2a.value += "," + opt2.value;
+                op3a.value += "," + opt3.value;
+                op4a.value += "," + opt4.value;
+                op4a.value += "," + opt5.value;
+                copa.value += "," + copt.value;
+            }
+
+
+        }
+        
+    });
+</script>
