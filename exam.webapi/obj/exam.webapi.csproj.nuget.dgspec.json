@@ -58,6 +58,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [

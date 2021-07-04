@@ -11,6 +11,9 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "jQuery/3.6.0": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -812,6 +815,29 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/3.6.0": {
+      "sha512": "sSzCTDWn15waSMjDrP21jjgG1j1pwISLaKiVCClwU4XGAmuZt+FScLkdyRvh9ppoIxAW/tJtJBYei+3CAwFQ7g==",
+      "type": "package",
+      "path": "jquery/3.6.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-3.6.0-vsdoc.js",
+        "Content/Scripts/jquery-3.6.0.js",
+        "Content/Scripts/jquery-3.6.0.min.js",
+        "Content/Scripts/jquery-3.6.0.min.map",
+        "Content/Scripts/jquery-3.6.0.slim.js",
+        "Content/Scripts/jquery-3.6.0.slim.min.js",
+        "Content/Scripts/jquery-3.6.0.slim.min.map",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-3.6.0.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.3.6.0.nupkg.sha512",
+        "jquery.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -2049,7 +2075,8 @@
     "net5.0": [
       "Microsoft.AspNetCore.Authentication.Cookies >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.7"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.7",
+      "jQuery >= 3.6.0"
     ]
   },
   "packageFolders": {
@@ -2111,6 +2138,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[5.0.7, )"
+          },
+          "jQuery": {
+            "target": "Package",
+            "version": "[3.6.0, )"
           }
         },
         "imports": [

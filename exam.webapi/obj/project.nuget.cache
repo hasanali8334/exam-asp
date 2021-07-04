@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "93RkUv1d0Ro3CkEcHpvwePeJa2yrNsUcet3bCqNHm0m36dK3j+hOgtuy3nzhigIROcxncA/dutzH3OHh6h88pA==",
+  "dgSpecHash": "PcUS2w2QGp6MhJH4YZRu+m/4cIqDFFD5X4J8r9mtkllp/hPaBhn/tWd/3ycIoG7wpKa9nJIAXygQTz6XTALIGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Documents\\asp\\examasp\\exam-asp\\exam.webapi\\exam.webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hasan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

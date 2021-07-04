@@ -1,4 +1,6 @@
-﻿
+﻿<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
 <form action="#" method="post">
     <div class="form-group">
         <label for="examname">Sınav Adı:</label>
@@ -30,8 +32,8 @@
     </div>
     <div class="form-group">
         <label for="copt">Doğru şık:</label>
-        <select id="copt">
-            <option value="" selected="selected">doğru şıkkı seçiniz</option>
+        <select id="copt" class="form-control" name="copt">
+            <option value="a" >doğru şıkkı seçiniz</option>
             <option value="opt1">a şıkkı</option>
             <option value="opt2">b şıkkı</option>
             <option value="opt3">c şıkkı</option>
@@ -47,10 +49,10 @@
     <input name="opt5array" id="opt5array" type="hidden" class="form-control"/>
     <input name="coptarray" id="coptarray" type="hidden" class="form-control"/>
     <button type="submit">Sınav oluşturmayı tamamlayın</button>
-    <button onclick="kaydet()">Soruyu kaydet</button>
+    <button onclick="kaydet();">Soruyu kaydet</button>
 </form>
 <script type="text/javascript">
-    $(document).ready(function () {
+   
         var qtext = document.getElementById("qtext");
         var opt1 = document.getElementById("opt1");
         var opt2 = document.getElementById("opt2");
@@ -65,29 +67,30 @@
         var op4a = document.getElementById("opt4array");
         var op5a = document.getElementById("opt5array");
         var copa = document.getElementById("coptarray");
-        function kaydet() {
-            if (op1a == null && op2a == null && op3a == null && op4a == null && op5a == null && copa == null) {
-                qtexta.value = qtext.value;
-                op1a.value = opt1.value;
-                op2a.value = opt2.value;
-                op3a.value = opt3.value;
-                op4a.value = opt4.value;
-                op4a.value = opt5.value;
-                copa.value = copt.value;
-
-            }
-            else {
-                qtexta.value += "," + qtext.value;
-                op1a.value += "," + opt1.value;
-                op2a.value += "," + opt2.value;
-                op3a.value += "," + opt3.value;
-                op4a.value += "," + opt4.value;
-                op4a.value += "," + opt5.value;
-                copa.value += "," + copt.value;
-            }
-
+        
+    function kaydet() {
+        console.log(copt.value);
+        if (op1a == null && op2a == null && op3a == null && op4a == null && op5a == null && copa == null) {
+            qtexta.value = qtext.value;
+            op1a.value = opt1.value;
+            op2a.value = opt2.value;
+            op3a.value = opt3.value;
+            op4a.value = opt4.value;
+            op4a.value = opt5.value;
+            copa.value = copt.value;
+            console.log("if e girdi");
 
         }
-        
-    });
+        else {
+            qtexta.value += "," + qtext.value;
+            op1a.value += "," + opt1.value;
+            op2a.value += "," + opt2.value;
+            op3a.value += "," + opt3.value;
+            op4a.value += "," + opt4.value;
+            op4a.value += "," + opt5.value;
+            copa.value += "," + copt.value;
+        }
+
+
+    }
 </script>

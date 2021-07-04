@@ -25,6 +25,10 @@ namespace exam.webapi.Controllers
 
             return View();
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Create(string examname,string qtext,string opt1, string opt2,string opt3 ,string opt4,string opt5 , string copt)
         {
@@ -37,11 +41,12 @@ namespace exam.webapi.Controllers
             string[] copta = copt.Split(',');
             Exam exam = new Exam();
             exam.examname = examname;
-            
+            List<Question> qlist = new List<Question>();
+            Question q = new Question();
 
             for (int i = 0; i < qtexta.Length; i++)
             {
-                Question q = new Question();
+
                 q.qtext = qtexta[i].ToString();
                 q.opt1 = op1a[i].ToString();
                 q.opt2 = op2a[i].ToString();
@@ -49,7 +54,12 @@ namespace exam.webapi.Controllers
                 q.opt4 = op4a[i].ToString();
                 q.opt5 = op5a[i].ToString();
                 q.copt = copta[i].ToString();
-                exam.Questions.Add(q);
+                qlist.Add(q);
+                
+            }
+            foreach (Question item in qlist)
+            {
+                exam.Questions.Add(item);
             }
 
             _context.Exams.Add(exam);
@@ -59,5 +69,9 @@ namespace exam.webapi.Controllers
             return View();
         }
 
+        private static void NewMethod(Exam exam, Question q)
+        {
+            exam.Questions.Add(q);
+        }
     }
 }
